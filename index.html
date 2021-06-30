@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coding Quiz</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main>
+
+
+        <div class="high-scores">
+            <button id="high-scores-link" onclick="setScreen(`high`)">View High Scores</button>
+        </div>
+        <div id="start-screen">
+            <h1>Coding Quiz!</h1>
+            <p id="welcome">Welcome to this quiz! You have 60 seconds to answer the questions. If you answer a question incorrectly, you will loose 10 seconds. At the end your score will be how many seconds are left. Good Luck!  </p>
+            <button id="start-quiz" onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="question-screen" class="hide-screen">
+            <h4 id="timer"><span>60 Seconds Remaining</span></h4>
+            <h1 id="question">Question</h1>
+            <button class= "answer-choice" id="answer1" onclick="nextQuestion(`answer1`)">answer1</button>
+            <button class= "answer-choice" id="answer2" onclick="nextQuestion(`answer2`)">answer2</button>
+            <button class= "answer-choice" id="answer3" onclick="nextQuestion(`answer3`)">answer3</button>
+            <button class= "answer-choice" id="answer4" onclick="nextQuestion(`answer4`)">answer4</button>
+            <hr>
+            <p id="correctness"></p>
+        </div>
+        <div id="results-screen" class="hide-screen">
+            <h1>All done!</h1>
+            <h3 >Your final score is <span id="final-score"></span> </h3>
+            <form id="form" onsubmit="submitScore(event)">
+                <label id="initials">Enter Initials</label>
+                <input name="initials" type="text">
+                <button id="submit-score">Submit</button>
+            </form>
+        </div>
+        <div id="high-screen" class="hide-screen">
+            <h1>High Scores</h1>
+            <div id="high-score-list">
+                
+            </div>
+            <button class="buttons" onclick="setScreen(`start`)">Go Back</button>
+            <button class="buttons" onclick="clearHistory()">Clear High Scores</button>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
