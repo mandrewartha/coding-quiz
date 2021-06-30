@@ -8,4 +8,4 @@ This coding quiz was created by combining HTML, CSS, JavaScript, and API's. A ba
 ![image](https://user-images.githubusercontent.com/84876493/123889652-d0bed600-d90a-11eb-9fa5-b4890af1047e.png)
 
 # Link
-
+https://mandrewartha.github.io/coding-quiz/
